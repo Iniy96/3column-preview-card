@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --orange : hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --light-gray-bg-heading-btn : hsl(0, 0%, 95%) ; 
+    --heading-font : 'Big Shoulders Display', cursive; ;
+    --paragraph-font :  'Lexend Deca', sans-serif; ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ******************* Layout *********************** */
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em;
+    background-color: var(--light-gray-bg-heading-btn);
+    display: grid;
+    place-content: center;
+}
+.container{
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+}
+/* ******** Setting background colors */
+.sedan{
+    background-color: var(--orange);
+    border-radius: 8px 8px 0 0;
+    
+}
+
+.SUVs{
+    background-color: var(--cyan);
+}
+
+.Luxury{
+    background-color: var(--dark-cyan);
+    border-radius: 0 0 8px 8px;
+}
+
+/* ***********Setting layouts*********** */
+
+.cars{
+    padding: 3em;
+}
+.cars img{
+    width: 4em;
+    margin-bottom: 2em;
+}
+.cars h2{
+    font-family: var(--heading-font);
+    color: var(--light-gray-bg-heading-btn);
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.cars p{
+    font-family: var(--paragraph-font);
+    color: var(--transparent-white-paragraphs);
+    font-size: 16px;
+    padding: 2em 0 3em 0;
+    line-height: 1.7;
+}
+/* *************Learn more button*********** */
+.cars a{
+    font-family: var(--light-gray-bg-heading-btn);
+    font-size: 18px;
+    text-decoration: none;
+    
+    letter-spacing: 1px;
+    background-color: var(--light-gray-bg-heading-btn);
+    padding: 12px 25px;
+    border-radius: 25px;
+}
+.sedan a{
+    color:var(--orange) ;
+}
+.SUVs a{
+    color:var(--cyan) ;
+}
+.Luxury a{
+    color:var(--dark-cyan) ;
+}
+
+/* ****************Media Queries ****************** */
+@media (min-width:600px) {
+    .container{
+        flex-direction: row;
+    }
+    .cars .btn{
+        margin: 3em 0 2em 0;
+    }
+    .sedan{
+        border-radius: 8px 0 0 8px ; 
+    }  
+    .Luxury{
+        border-radius: 0 8px 8px 0 ;
+    }
+}
+
+/* **********attribution****** */
+/* .attribution { 
+    font-size: 12px; 
+    text-align: center;
+   
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ } */
